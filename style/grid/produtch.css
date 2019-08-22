@@ -1,0 +1,241 @@
+DIV#grid_container
+{
+  left: 0px;
+  top: 0px;
+  height	: 100%;
+  margin-bottom: 10px;
+}
+
+TABLE.grid
+{
+	background-color: #FBFBFB;
+	background-image: url(http://crm.produtch.nl/img/gradient_large.png);
+	background-repeat: repeat-x;
+	width		: 99%;
+        border-collapse : collapse;
+        border-spacing  : 0px;
+  -webkit-box-shadow	: 4px 4px 3px #999;
+  -moz-box-shadow	: 4px 4px 3px #999;
+  box-shadow		: 4px 4px 3px #999;
+}
+
+TABLE.grid TR TH
+{
+        color		: #ff6e00;
+	text-align	: center;
+	cursor		: pointer;
+}
+TABLE.grid TR:hover TH
+{
+  background-image	: url(/style/img/resize.png);
+  background-repeat	: no-repeat;
+  background-position	: -1px 3px;
+  background-size	: 12px 12px;
+  -moz-background-size	: 12px 12px;
+  -webkit-background-size: 12px 12px;
+}
+
+TABLE.grid TR TH A
+{
+        text-decoration : none;
+}
+
+TABLE.grid TR TD,
+TABLE.grid TR TH
+{
+  padding-top		: 2px;
+  padding-bottom	: 2px;
+  margin		: 0px;
+  font-size		: 11px;
+}
+TABLE.grid TR TD
+{
+	padding-left	: 4px;
+}
+
+TABLE.grid TR.even
+{
+	background-color: transparent;
+}
+
+TABLE.grid TR.odd
+{
+	background-color: #EEEEEE;
+}
+
+TABLE.grid  TR.insert > TD > INPUT,
+TABLE.grid  TR.insert > TD > SELECT,
+TABLE.grid  TR.data   > TD > INPUT,
+TABLE.grid  TR.data   > TD > SELECT,
+TABLE.grid  TR.filter > TD > INPUT,
+TABLE.grid  TR.filter > TD > SELECT
+{
+        border		: none;
+	border-bottom	: solid 1px #DDDDDD; 
+	border-left	: solid 1px #DDDDDD; 
+	width		: 100%;
+}
+
+TABLE.grid TR.filter
+{
+}
+
+TABLE.grid TR.insert
+{
+        display         : none;
+}
+
+TABLE.grid TR:hover,
+TABLE.grid TR.selected
+{
+	cursor		: pointer;
+        background-color: #FFFF99;
+}
+
+.error,
+TABLE.grid TR.selected TD INPUT.error,
+TABLE.grid TR.selected TD SELECT.error,
+TABLE.grid TR.selected TD TEXTAREA.error
+{
+        border-bottom	: solid 1px red;
+        border-left	: solid 1px red;
+}
+
+TABLE.grid TR.selected TD SPAN.rowButtons,
+TABLE.grid TR.normal   TD SPAN.rowNr,
+TABLE.grid TR.selected TD INPUT,
+TABLE.grid TR.selected TD SELECT,
+TABLE.grid TR.selected TD TEXTAREA,
+TABLE.grid TR.normal   TD A,
+TABLE.grid TR.normal   TD SPAN.text
+{
+        display         : inline-block;
+}
+
+TABLE.grid TR.normal   TD SPAN.text IMG
+{
+	padding-right    : 5px;
+	padding-left     : 5px;
+}
+
+TABLE.grid TR.normal   TD SPAN.rowButtons,
+TABLE.grid TR.selected TD SPAN.rowNr,
+TABLE.grid TR.selected TD A,
+TABLE.grid TR.selected TD SPAN.text,
+TABLE.grid TR.insert   TD SPAN.text,
+TABLE.grid TR.filter   TD SPAN.text,
+TABLE.grid TR.normal   TD INPUT,
+TABLE.grid TR.normal   TD SELECT,
+TABLE.grid TR.normal   TD TEXTAREA,
+TABLE.readonly TR.selected TD SPAN.rowButtons,
+TABLE.readonly TR.selected TD INPUT,
+TABLE.readonly TR.selected TD TEXTAREA
+{
+        display         : none;
+}
+
+TABLE.readonly TR.selected TD SPAN.text,
+TABLE.readonly TR.selected TD SPAN.rowNr,
+TABLE.readonly TR.selected TD A
+{
+	display		: inline;
+}
+
+
+INPUT[type="hidden"]
+{
+	display		: none;
+	width		: 0px;
+	height		: 0px;
+	visibility	: hidden;
+}
+
+INPUT
+,SELECT
+{
+        background-color: transparent;
+        width           : 100%;
+}
+
+TABLE.grid TR.footer > TD
+{
+  text-align	: center;
+  height	: 18px;
+}
+
+SPAN.rowButtons INPUT[type="button"],
+SPAN.rowButtons INPUT[type="image"],
+TABLE.grid TR.footer > TD > INPUT[type="button"],
+TABLE.grid TR.footer > TD > INPUT[type="image"],
+TABLE.grid TR.footer > TD > INPUT
+{
+  width		: 16px;
+  height	: 16px;
+}
+
+TABLE.grid TR.footer DIV#resizer 
+{
+  visibility	: hidden;
+  position	: relative;
+  bottom	: -2px;
+  right		: 1px;
+  float		: right;
+  width		: 16px;
+  height	: 16px;
+  background-image	: url(/style/img/resizer.png);
+}
+TABLE.grid TR.footer DIV#resizer:hover
+{
+  cursor	: move;
+}
+TABLE.grid:hover TR.footer DIV#resizer
+{
+  visibility	: visible;
+}
+
+
+DIV.scrollbar
+{
+  display	: inline;
+  margin	: 10px;
+}
+
+DIV.scrollbar INPUT
+{
+  border	: none;
+  border-bottom	: solid 1px #DDDDDD; 
+  width		: 24px;
+  text-align	: center;
+}
+DIV.scrollbar:before
+{
+  content	: "Pagina ";
+}
+DIV.scrollbar INPUT:before
+{
+  content	: " van ";
+}
+DIV.scrollbar INPUT.rows:before
+{
+  content	: " max ";
+}
+DIV.scrollbar INPUT.rows:after
+{
+  content	: " rijen ";
+}
+
+
+TABLE.grid TR.filtered
+{
+  display	: none;
+}
+
+
+TABLE.grid TD.id
+{
+  width		: 40px;
+}
+
+TABLE.grid TD.label
+{
+}

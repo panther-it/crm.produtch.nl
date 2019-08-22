@@ -1,0 +1,253 @@
+BODY
+{
+  vertical-align      : top;
+  position            : relative;
+  width               : 100%;
+}
+
+DIV
+{
+  padding            : 5px;
+  border-radius      : 5px;
+  background-color   : white;
+  -moz-transition-duration      : 0.5s;
+  -webkit-transition-duration   : 0.5s;
+  -o-transition-duration        : 0.5s;
+}
+
+/* == Panel ============================================== */
+DIV.Panel
+{
+  position                      : relative;
+  margin-top                    : 5px;
+  padding                       : 0px 0px 5px 0px;
+  display                       : block;
+  height                        : auto;
+  width                         : 300px;
+  border                        : solid 1px black;
+  border-left                   : none;
+  border-top-left-radius        : 0px;
+  border-bottom-left-radius     : 0px;
+  -moz-border-top-left-radius   : 0px;
+  -moz-border-bottom-left-radius: 0px;
+  float                         : left;
+  z-index                       : 2;
+}
+
+
+
+DIV.Panel > DIV.panellabel
+{
+  position            : absolute;
+  margin-right        : -60px;
+  padding-top         : 0px;
+  right               : 0px;
+  top                 : 45px;
+  display             : block;
+  cursor              : url(/style/img/icon_pin.png),w-resize; 
+  border              : solid 1px black;
+  width               : 80px;
+  height              : 20px;
+  word-wrap           : break-word;
+  font-size           : 14pt;
+  font-weight         : 500;
+  text-align          : left;
+  margin-top          : 20px;
+  vertical-align      : bottom;
+  background-color    : #ff6e00;
+  color               : white;
+  filter              : progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+  -ms-filter          : 'progid:DXImageTransform.Microsoft.BasicImage(rotation=1)';
+  -webkit-transform   : rotate(90deg); 
+  -moz-transform      : rotate(90deg);
+  -o-transform        : rotate(90deg);
+  transform           : rotate(90deg);
+  rotation-point      : 50% 50%;
+  border-bottom                 : none;
+  border-bottom-left-radius     : 0px;
+  border-bottom-right-radius    : 0px;
+  -moz-border-bottom-left-radius : 0px;
+  -moz-border-bottom-right-radius: 0px;
+
+}
+
+DIV.Panel.pinned
+{
+  z-index                           : 0;
+}
+
+DIV.Panel > DIV.panellabel:hover:before
+{
+  border-radius                     : 5px;
+  filter              : progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  -ms-filter          : 'progid:DXImageTransform.Microsoft.BasicImage(rotation=3)';
+  -webkit-transform   : rotate(270deg); 
+  -moz-transform      : rotate(270deg);
+  -o-transform        : rotate(270deg);
+  transform           : rotate(270deg);
+  rotation-point      : 150% 150%;
+  display                           : block;
+  white-space                       : nowrap;
+  margin-top                        : -20px;
+  margin-left                       : -20px;
+  padding                           : 2px;
+  background-color                  : #FFCC66;
+  border                            : dotted 1px #fce4b6;
+  font-size                         : 8pt;
+  content                           : "Click to Pin-down.";
+}
+
+DIV.Panel.pinned > DIV.panellabel:hover:before
+{
+  content                           : "Click to unPin.";
+}
+
+DIV.Panel H1
+{
+  width               : 100%;
+  display             : inline-block;
+  background-color    : #ff6e00;
+  color               : white;
+}
+
+
+DIV#navigate INPUT,
+DIV#navigate SELECT
+{
+  width               : 100%;
+  border-style        : none none solid none;
+}
+
+
+DIV#navigate SELECT
+{
+  background-color    : #ff6e00;
+  color               : white;
+  font-weight         : 500;
+  font-size           : 14pt;
+  padding-top         : 5px;
+}
+div#navigate INPUT
+{
+   margin-bottom      : 5px;
+}
+
+DIV#result
+{
+  white-space                       : pre;
+  font-family                       : monospace;
+  position                          : fixed;
+  z-index                           : 0;
+  width                             : 98.5%;
+  display                           : none;
+  height                            : 50px;
+  overflow                          : auto;
+  left                              : 1px;
+  bottom                            : 0px;
+  background-color                  : white;
+  border                            : solid 1px #AAAAFF;
+  border-top                        : solid 8px #AAAAFF;
+  border-bottom                     : none;
+  border-bottom-right-radius        : 0px;
+  border-bottom-left-radius         : 0px;
+  -moz-border-bottom-right-radius   : 0px;
+  -moz-border-bottom-left-radius    : 0px;
+}
+
+DIV#result:hover
+{
+  z-index                           : 1000;
+  height                            : 300px;
+}
+
+/* == Tree ============================================== */
+UL.Tree
+{
+  margin-left                   : 10px;
+  height                        : 0px;
+  display                       : block;
+  overflow                      : hidden;
+  transition-duration           : 0.5s;
+  -moz-transition-duration      : 0.5s;
+  -webkit-transition-duration   : 0.5s;
+  -o-transition-duration        : 0.5s;
+  list-style-type               : none;
+}
+
+UL.Tree > LI
+{
+  list-style-type               : none;
+  padding-left                  : 0px; 
+  margin-left                   : 0px;
+}
+
+UL.Tree > LI:before
+{
+  display                       : block;
+  float                         : left;
+  content                       : " ";
+  width                         : 14px;
+  height                        : 14px;
+  background-image              : url(/style/img/tree_arrows.png);
+  background-repeat             : no-repeat;
+  background-position           : 0px -2px;
+}
+
+UL.Tree > LI.open:before
+{
+  background-position           : -16px -2px;
+}
+
+UL.Tree > LI:hover:before
+{
+  background-position           : -32px -2px;
+}
+
+UL.Tree > LI.open:hover:before
+{
+  background-position           : -48px -2px;
+}
+UL.Tree > LI.last:before
+{
+  background-image              : none;
+}
+
+UL.Tree > LI > A                       { cursor: pointer; }
+UL.Tree > LI > A:before                { margin: auto; margin-right	   : 4px; vertical-align: -4px;                                 			}
+UL.Tree > LI > A.datacenters:before    { content           : url(/style/img/icon_datacenter.png); 		}
+UL.Tree > LI > A.suites:before         { content           : url(/style/img/icon_suite.png); 			}
+UL.Tree > LI > A.racks:before          { content           : url(/style/img/icon_rack.png); 			}
+UL.Tree > LI > A.devices:before        { content           : url(/style/img/icon_device.png); 			}
+UL.Tree > LI > A.customers:before      { content           : url(/style/img/icon_customer.png);     		}
+UL.Tree > LI > A.contacts:before       { content           : url(/style/img/icon_customer.png);     		}
+UL.Tree > LI > A.orders:before         { content           : url(/style/img/icon_order.png);     		}
+UL.Tree > LI > A.invoices:before       { content           : url(/style/img/icon_invoice.png);     		}
+UL.Tree > LI > A.authorizations:before { content           : url(/style/img/icon_authorization.png);     	}
+UL.Tree > LI > A.authorization:before  { content           : url(/style/img/icon_authorization.png);     	}
+UL.Tree > LI > A.domains:before        { content           : url(/style/img/icon_domain.png);     		}
+UL.Tree > LI > A.websites:before       { content           : url(/style/img/icon_website.png);     		}
+UL.Tree > LI > A.emails:before         { content           : url(/style/img/icon_email.png);     		}
+UL.Tree > LI > A.nameservers:before    { content           : url(/style/img/icon_nameserver.png);     		}
+UL.Tree > LI > A.coloaccesses:before   { content           : url(/style/img/icon_coloaccess.png);     		}
+UL.Tree > LI > A.colo_access:before    { content           : url(/style/img/icon_coloaccess.png);     		}
+UL.Tree > LI > A.accessdevices:before  { content           : url(/style/img/icon_accessdevice.png);     	}
+UL.Tree > LI > A.tasks:before          { content           : url(/style/img/icon_task.png);     		}
+UL.Tree > LI > A.products:before       { content           : url(/style/img/icon_product.png);     		}
+UL.Tree > LI > A.productgroups:before  { content           : url(/style/img/icon_folder.png);     		}
+UL.Tree > LI.loading > A:before        { content           : url(/style/img/icon_loading.png);     		}
+
+
+DIV#navigate > UL.Tree
+{
+  height                        : auto;
+}
+
+
+/* == OLD =============================== */
+DIV#right
+{
+  position                          : relative;
+  z-index                           : 1;
+}
+
+

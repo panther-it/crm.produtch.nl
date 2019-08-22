@@ -1,0 +1,121 @@
+.hide
+{
+  position		: absolute;
+  top			: 100px;
+  right			: 1px;
+	display: none;
+}
+.show
+{
+  position		: absolute;
+  top			: 100px;
+  left			: 100px;
+}
+
+
+DIV#form_container
+{
+  z-index		: 2;
+  border		: solid 2px gray;
+  background-color	: #FEFEFE;
+  -webkit-box-shadow	: 4px 4px 3px #999;
+  -moz-box-shadow	: 4px 4px 3px #999;
+  box-shadow		: 4px 4px 3px #999;
+  -moz-transition-duration	: 0.5s;
+  -webkit-transition-duration	: 0.5s;
+  -o-transition-duration	: 0.5s;
+}
+
+TABLE.form
+{
+	height		: auto;
+	overflow	: hidden;
+	background-color: white;
+	background-image: url(http://crm.produtch.nl/style/img/gradient_large.png);
+	background-repeat: repeat-x;
+	margin-left	: 0px;
+	width		: 650px;
+	margin-bottom	: 30px;
+}
+
+TABLE.form TR TH
+{
+        color		: #ff6e00;
+	text-align	: right;
+	vertical-align	: top;
+	padding-left	: 50px;
+	width		: 100px;
+}
+
+TABLE.form TR TH A
+{
+        color           : white;
+        text-decoration : none;
+}
+
+TABLE.form TR TD
+{
+        border          : none; 
+        padding         : 2px;
+        margin          : 0px;
+	text-align	: left;
+}
+
+TABLE.form TR TD INPUT,
+TABLE.form TR TD SELECT
+{
+        border          : none; 
+	border-bottom	: solid 1px #DDDDDD; 
+	border-left	: solid 1px #DDDDDD; 
+}
+
+.error,
+TABLE.form TR TD INPUT.error,
+TABLE.form TR TD SELECT.error,
+TABLE.form TR TD TEXTAREA.error
+{
+	border-color	: #FF8888;
+}
+
+TABLE.form TR TD TEXTAREA 
+{
+        border          : none; 
+	width		: 100%;
+	background-image: url(http://www.redunix.nl/img/server_spec.jpg);
+	background-repeat: repeat-x;
+	height		: 100px;
+	border-bottom	: solid 1px #DDDDDD; 
+	border-left	: solid 1px #DDDDDD; 
+}
+
+TABLE.form SPAN.text
+{
+	display: none;
+}
+
+INPUT
+,SELECT
+{
+        background-color: transparent;
+        color		: #ff6e00;
+}
+
+TABLE.form TR.footer TD INPUT[type="text"]
+{
+  width			: 24px;
+  height		: 16px;
+  margin-left		: 4px;
+  margin-right		: 4px;
+}
+TABLE.form TR.footer TD INPUT[type="image"]
+{
+  margin		: 5px;
+  width			: auto;
+  height		: auto;
+  border		: none;
+}
+
+TABLE.form TR.footer TD
+{
+  text-align		: right;
+}
